@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="true">
+
+  <contextName>logback</contextName>
+  <property name="app.name" value="idmapping"/>
+
+  <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>%d [%thread] %-5level %logger{36} [%file : %line] - %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <appender name="log" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+      <fileNamePattern>logs/%d{yyyy-MM-dd}.${app.name}.log
+      </fileNamePattern>
+      <maxHistory>60</maxHistory>
+      <totalSizeCap>20GB</totalSizeCap>
+    </rollingPolicy>
+
+    <encoder>
+      <pattern>%d [%thread] %-5level %logger{36} [%file : %line] - %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <root level="info">
+    <appender-ref ref="log"/>
+  </root>
+
+</configuration>
