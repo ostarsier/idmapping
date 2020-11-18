@@ -1,5 +1,5 @@
 ### 我的博客
-[用户行为分析-埋点实时数仓实践](https://mp.csdn.net/editor/html/109784875)
+[用户行为分析-埋点实时数仓实践](https://blog.csdn.net/appearbeauty/article/details/109784875)
 
 ### 功能
 - 用户一对多关联逻辑实现
